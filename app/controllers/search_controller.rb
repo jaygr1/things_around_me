@@ -13,7 +13,7 @@ class SearchController < ApplicationController
         new_object << "&#{attribute}=#{params[attribute]}"
       end
     end
-    binding.pry
+   
   end
 
 
