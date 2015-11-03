@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  get '/stub', to: "search#stub"
+
   resources :nyteventsapi
-  resources :searches
+  resources :search
+  resources :welcome
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

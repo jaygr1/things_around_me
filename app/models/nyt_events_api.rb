@@ -8,6 +8,7 @@ class NytEventsApi
 
 
 
+
   def self.test
   keys = YAML.load_file('application.yml')
   key = keys['NYT_EVENTS_API_KEY']

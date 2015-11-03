@@ -1,3 +1,16 @@
-<%= form_tag('/search', method: 'get') do %>
+<%= form_tag('/stub', method: 'get') do %>
+
 <%= label_tag(:zip_code, "Zip Code") %>
+<%= search_field_tag(:zip_code) %></br>
+
+<%= label_tag(:category, "What sort of activity are you looking for?") %>
+<%= search_field_tag(:category) %></br>
+
+<%= radio_button_tag(:free, "true") %>
+<%= label_tag(:free, "I only want free events") %><br>
+
+<%= radio_button_tag(:kid_friendly, "true") %>
+<%= label_tag(:kid_friendly, "I only want events that are child friendly") %><br>
+
+<%= submit_tag "Search" %>
 <% end %>
