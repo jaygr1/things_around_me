@@ -1,8 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    # kid_friendly = params[:kid_friendly] 
-    # free = params[:free]
+ 
   end
 
   def stub
@@ -13,6 +12,10 @@ class SearchController < ApplicationController
         new_object << "&#{attribute}=#{params[attribute]}"
       end
     end
+     results = NytEventsApi.events(new_object)
+      @results = results
+    
+      redirect_to search_index_path
    
   end
 
